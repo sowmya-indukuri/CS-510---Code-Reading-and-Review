@@ -9,8 +9,8 @@ import CurrentWeather from "../Currentweather/current";
 import "./citysearchstyle.css";
 
 //importing the charts
-import LineChart from "../Charts/LineChart";
-import BarChart from "../Charts/BarChart";
+import DailyTemperatureChart from "../Charts/DailyTemperatureChart";
+import WeeklyTemperatureChart from "../Charts/WeeklyTemperatureChart";
 import UVChart from "../Charts/UVChart";
 import WindChart from "../Charts/WindChart";
 import HumidityChart from "../Charts/HumidityChart";
@@ -24,7 +24,6 @@ class SearchCity extends Component {
     latitude: undefined,
     longitude: undefined,
   };
-
   
   //begins city search
   onClickCityChange = (event) => {
@@ -159,11 +158,11 @@ class SearchCity extends Component {
             </div>
           </div>
           <div className="row lw mt-4">
-            {/*Chart -1 24 hours*/}
+            {/*Chart -1 DailyTemperatureChart*/}
             <div className="col-md-7 col-lg-6 col-sm-12">
               <div className="cardline">
                 <div className="card-body">
-                  <LineChart
+                  <DailyTemperatureChart
                     lat={this.state.latitude}
                     lon={this.state.longitude}
                   />
@@ -174,11 +173,11 @@ class SearchCity extends Component {
                 </div>
               </div>
             </div>
-            {/*Chart -2 Last week Temperature*/}
+            {/*Chart -2 Last weekly Temperature*/}
             <div className="col-md-7 col-lg-6 col-sm-12">
               <div className="cardbar">
                 <div className="card-body">
-                  <BarChart
+                  <WeeklyTemperatureChart
                     lat={this.state.latitude}
                     lon={this.state.longitude}
                   />
