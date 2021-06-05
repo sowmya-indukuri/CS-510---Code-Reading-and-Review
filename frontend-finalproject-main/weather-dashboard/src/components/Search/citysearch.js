@@ -1,15 +1,22 @@
+//JS file for city search component
+//when city is entered it's routed to this js
+
 import React, { Component } from "react";
 import axios from "axios";
+
+// importing required css and js files
 import CurrentWeather from "../Currentweather/current";
+import "./citysearchstyle.css";
+
+//importing the charts
 import LineChart from "../Charts/LineChart";
 import BarChart from "../Charts/BarChart";
 import UVChart from "../Charts/UVChart";
 import WindChart from "../Charts/WindChart";
 import HumidityChart from "../Charts/HumidityChart";
 import VisibilityChart from "../Charts/VisibilityChart";
-import "./citysearchstyle.css";
 
-
+//For each city searched the related weather details and charts are displayed in this component
 class SearchCity extends Component {
   state = {
     name: "",
@@ -18,6 +25,8 @@ class SearchCity extends Component {
     longitude : undefined,
   };
 
+  //after valid city is given 
+  //City's latitude and longitute are set using api
   componentDidMount() {
     let currentComponent = this;
     if ("geolocation" in navigator) {
@@ -39,6 +48,9 @@ class SearchCity extends Component {
     }
   }
   
+  //validates city name
+  //checks if appropiate city name is given
+  //else prompts user to enter current city name
   OnClickCitySearch = (event) => {
     event.preventDefault();
     var inputcity=this.state.search;
@@ -75,7 +87,7 @@ class SearchCity extends Component {
   };
   
  
-  
+  //begins city search
   onClickCityChange = (event) => {
     const citySearch = event.target.value;
     this.setState({
@@ -83,6 +95,7 @@ class SearchCity extends Component {
     });
   };
 
+  //HTML view of the city search page
   render() {
     const { name } = this.state;
     if(name){
@@ -90,6 +103,7 @@ class SearchCity extends Component {
       <div className="container">
         <div className="row">
           <div className=" ml-auto col-md-6 col-lg-6 col-sm-12">
+            {/*Input city search div*/}
             <div className=" input-group inputfield">
               <input
                 className="inputSearch form-control"
@@ -112,6 +126,7 @@ class SearchCity extends Component {
           <br /><br />
           <div className="row">
             <div className="col-3"></div>
+          {/*Weather div*/}
           <div className="col-md-4 col-lg-4 col-sm-12">
               <CurrentWeather
                 lat ={this.state.latitude}
@@ -120,6 +135,7 @@ class SearchCity extends Component {
           </div>
           </div>
           <div className="row lw mt-4">
+          {/*Chart -1 24 hours*/}
           <div className="col-md-7 col-lg-6 col-sm-12">
                 <div className="cardline">
                 <div className="card-body">
@@ -131,6 +147,7 @@ class SearchCity extends Component {
           </div>
           </div>
           </div>
+          {/*Chart -2 Last week Temperature*/}
           <div className="col-md-7 col-lg-6 col-sm-12">
                 <div className="cardbar">
                 <div className="card-body">
@@ -144,6 +161,7 @@ class SearchCity extends Component {
           </div>
     </div>
         <div className="row mt-4">
+          {/*Chart -3 UV Index*/}
           <div className="col-md-4 col-lg-4 col-sm-12">
                 <div className="carduv">
                 <div className="card-body">
@@ -154,6 +172,7 @@ class SearchCity extends Component {
           </div>          
           </div>
           </div>
+          {/*Chart -4 Wind Speed*/}
           <div className="col-md-4 col-lg-4 col-sm-12">
                 <div className="cardwind">
                 <div className="card-body">
@@ -166,7 +185,8 @@ class SearchCity extends Component {
           </div>        
           </div>
           </div>
-        <div className="col-md-4 col-lg-4 col-sm-12">
+          {/*Chart -5 Humidity*/}
+          <div className="col-md-4 col-lg-4 col-sm-12">
         <div className="cardhum">
         <div className="card-body">
         <p className="humi"><b>Humidity</b></p>
@@ -186,6 +206,7 @@ class SearchCity extends Component {
         <div className="col-3"></div>
         <div className="col-md-4 col-lg-4 col-sm-12">
         <div className="cardvis">
+        {/*Chart -6 Visibility*/}
         <div className="card-body">
           <VisibilityChart
                 lat ={this.state.latitude}
