@@ -24,7 +24,7 @@ class CurrentWeather extends Component
           this.componentDidMount();
         }
       }
-      
+      // Doing an API call to set the required variables.
       componentDidMount = () => {
         
         axios.get("https://api.openweathermap.org/data/2.5/weather?lat="+this.props.lat+"&lon="+this.props.lon+"&units=imperial&appid=61d5f8577e9dc21f1a56b94167a17bf8")
@@ -43,13 +43,15 @@ class CurrentWeather extends Component
         });
       };
     
-
+   
      render() {
         return (
+           //
           <div>
               <div className="row">
                 <div className="col-md-4 col-lg-4 col-sm-12">
                 <div className="card">
+                  {/*Gives the name of the place and it's corresponding temperature which is fetched from openweathermap*/}
                     <div className="card-body">
                     <div className="d-flex justify-content-between">
                           <div className="locname"><b>{this.state.name}</b></div>
@@ -57,6 +59,7 @@ class CurrentWeather extends Component
                             <img className="weather-icon" src={`http://openweathermap.org/img/w/${this.state.icon}.png`} alt="weather icon"/>
                             </div>
                       </div>
+                      {/*Displays what will the weather look like based on the wether report*/}
                       <div className="float-right">You will experience {this.state.description}</div>
                     </div>
                 </div>
