@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Electricity } from "react-environment-chart";
-import "./WindChart.css";
+import "./Charts.css";
 
 // This component fetches windspeed data from
 // api and renders in the form of a chart called electricity.

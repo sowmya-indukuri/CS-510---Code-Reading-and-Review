@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ReactStoreIndicator from "react-score-indicator";
-import "./UVChart.css";
+import "./Charts.css";
 
 // This component fetches UVindex data from api and renders
 // it in the form of ReactStoreIndicator called react-score-indicator.

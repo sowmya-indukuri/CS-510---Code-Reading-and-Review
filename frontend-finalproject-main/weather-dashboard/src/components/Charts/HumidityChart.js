@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Humidity } from "react-environment-chart";
 import axios from "axios";
-import "./Humidity.css";
+import "./Charts.css";
 
 // This component fetches humidity data from
 // api and render the chart called humidity.
