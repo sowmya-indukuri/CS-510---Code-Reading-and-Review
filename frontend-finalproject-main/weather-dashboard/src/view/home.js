@@ -1,7 +1,6 @@
-import React from "react";
-import SearchCity from "../components/Search/citysearch";
-import Footer from "../components/Footer/footer";
-
+import React from 'react'
+import SearchCity from '../components/Search/citysearch'
+import Footer from '../components/Footer/footer'
 
 //This function is called by the route in mainpage which indeed contains components like searchcity and footer
 function Homepage() {
@@ -13,8 +12,6 @@ function Homepage() {
       {/*This designs the footer section*/}
       <Footer />
     </div>
-  
-   
-  );
+  )
 }
-export default Homepage;
+export default Homepage
