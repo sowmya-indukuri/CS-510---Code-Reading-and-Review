@@ -25,35 +25,14 @@ class SearchCity extends Component {
     longitude: undefined,
   };
 
-  //after valid city is given
-  //City's latitude and longitute are set using api
-  componentDidMount() {
-    let currentComponent = this;
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        axios
-          .get(
-            "https://api.openweathermap.org/data/2.5/weather?lat=" +
-              lat +
-              "&lon=" +
-              lon +
-              "&units=imperial&appid=61d5f8577e9dc21f1a56b94167a17bf8"
-          )
-          .then((response) => {
-            const name = response.data.name;
-            const lon = response.data.coord.lon;
-            const lat = response.data.coord.lat;
-            currentComponent.setState({
-              latitude: lat,
-              longitude: lon,
-              name: name,
-            });
-          });
-      });
-    }
-  }
+  
+  //begins city search
+  onClickCityChange = (event) => {
+    const citySearch = event.target.value;
+    this.setState({
+      search: citySearch,
+    });
+  };
 
   //validates city name
   //checks if appropiate city name is given
@@ -86,31 +65,61 @@ class SearchCity extends Component {
           });
         })
         .catch((err) => {
-          if (err.response) {
-            alert("Please Give Valid City!");
-          } else if (err.request) {
-            alert("Please Check Internet Connection");
-          } else {
-            alert("Please Give Valid City");
+          if (err.response) 
+          {
+            alert("Please give a valid city name");
+          } 
+          else if (err.request) 
+          {
+            alert("Please check your internet connection");
+          }
+          else 
+          {
+            alert("Please give a valid city name ");
           }
         });
-    } else {
-      alert("Please Enter City!");
+    } 
+    else 
+    {
+      alert("Please enter City name");
     }
   };
 
-  //begins city search
-  onClickCityChange = (event) => {
-    const citySearch = event.target.value;
-    this.setState({
-      search: citySearch,
-    });
-  };
+  //after valid city is given
+  //City's latitude and longitute are set using api
+  componentDidMount() {
+    let currentComponent = this;
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        axios
+          .get(
+            "https://api.openweathermap.org/data/2.5/weather?lat=" +
+              lat +
+              "&lon=" +
+              lon +
+              "&units=imperial&appid=61d5f8577e9dc21f1a56b94167a17bf8"
+          )
+          .then((response) => {
+            const name = response.data.name;
+            const lon = response.data.coord.lon;
+            const lat = response.data.coord.lat;
+            currentComponent.setState({
+              latitude: lat,
+              longitude: lon,
+              name: name,
+            });
+          });
+      });
+    }
+  }
 
   //HTML view of the city search page
   render() {
     const { name } = this.state;
-    if (name) {
+    if (name) 
+    {
       return (
         <div className="container">
           <div className="row">
@@ -241,7 +250,9 @@ class SearchCity extends Component {
           </div>
         </div>
       );
-    } else {
+    } 
+    else 
+    {
       return (
         <div className="container">
           <div className="row">
