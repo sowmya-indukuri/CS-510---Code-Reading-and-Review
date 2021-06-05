@@ -24,7 +24,7 @@ const Header = () => {
   }
   // Setting the font color for header
   const FontColorOnHeader = {
-    color: 'white',
+    color: 'black',
   }
 
   return (

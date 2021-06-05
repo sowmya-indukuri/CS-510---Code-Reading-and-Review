@@ -1,5 +1,5 @@
 .pad {
-  background: #444;
+  background: rgb(254, 254, 255);
   opacity: 0.9;
   min-height: 50px;
 }
@@ -15,7 +15,7 @@
 }
 
 .toggle {
-  background-color: #444;
+  background-color: rgb(254, 254, 255);;
   width: 50px;
   height: 30px;
   border-radius: 1;
