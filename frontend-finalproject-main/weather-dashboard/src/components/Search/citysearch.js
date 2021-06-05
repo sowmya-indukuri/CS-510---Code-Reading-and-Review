@@ -10,10 +10,6 @@ import VisibilityChart from "../Charts/VisibilityChart";
 import "./citysearchstyle.css";
 
 
-//This component has all the major components like current weather,
-//line chart,Barchart,UV chart,Wind chart,Visibilty and humidity.This is the main
-//part of the application.
-
 class SearchCity extends Component {
   state = {
     name: "",
@@ -28,7 +24,6 @@ class SearchCity extends Component {
       navigator.geolocation.getCurrentPosition(function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
-        //console.log(position);
         axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat +"&lon=" +lon +"&units=imperial&appid=61d5f8577e9dc21f1a56b94167a17bf8")
        .then((response) => {
           const name = response.data.name;
@@ -56,7 +51,6 @@ class SearchCity extends Component {
       const name = response.data.name;
       const lon = response.data.coord.lon;
       const lat = response.data.coord.lat;
-      //console.log(response);
       this.setState({
         name: name,
         latitude: lat,
@@ -80,7 +74,7 @@ class SearchCity extends Component {
   }
   };
   
-  // this function changes the search value as given in search fiels from UI.
+ 
   
   onClickCityChange = (event) => {
     const citySearch = event.target.value;
@@ -118,7 +112,6 @@ class SearchCity extends Component {
           <br /><br />
           <div className="row">
             <div className="col-3"></div>
-          {/* <div className="d-flex justify-content-center"> */}
           <div className="col-md-4 col-lg-4 col-sm-12">
               <CurrentWeather
                 lat ={this.state.latitude}
@@ -126,7 +119,6 @@ class SearchCity extends Component {
               />
           </div>
           </div>
-          {/* </div> */}
           <div className="row lw mt-4">
           <div className="col-md-7 col-lg-6 col-sm-12">
                 <div className="cardline">
