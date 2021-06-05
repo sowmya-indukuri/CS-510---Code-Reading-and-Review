@@ -7,7 +7,10 @@ import Footer from "../components/Footer/footer";
 function Homepage() {
   return (
     <div className="home">
+      {/*This component functionality includes city search and reporting current
+      weather,24 hours forecast,minimum and maximum temperature,UVIndex,Wind Speed,Humidity*/}
       <SearchCity />
+      {/*This designs the footer section*/}
       <Footer />
     </div>
   

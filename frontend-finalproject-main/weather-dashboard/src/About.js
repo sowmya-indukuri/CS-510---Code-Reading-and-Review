@@ -4,11 +4,12 @@ import jprofile from "./profile.jpg";
 import spicture from "./Picture.jpeg";
 
 //This component has details about the application  and 
-//the developers of this application details.
+//the authors of this application.
 class About extends React.Component {
     
     render() {
       return(
+    //Main div which contains about the dashboard and the authors 
       <div>
         <h3 className="text-center abouthead">
               <span className="border p-2"><b>About Us</b></span></h3><br/>
@@ -17,6 +18,7 @@ class About extends React.Component {
                 <div className="d-flex justify-content-center">
                 <div className="cardabout">
                     <div className="card-body">
+                        {/*Short Description about the dashboard */}
                           <div className="aboutname">
                               <p>Weather dashboard allows us to know 
                                 about the current weather, 
@@ -31,7 +33,7 @@ class About extends React.Component {
                  </div>
                  </div>
             </div>
-            
+      {/*This div describes about the authors */}      
       <div className="about">
           <div className="row">
               <div className="col-md-6 col-lg-6 col-sm-12">
@@ -70,6 +72,7 @@ class About extends React.Component {
         </div>
 
     </div>
+    {/*Footer for About page*/}
     <nav className="footer navbar justify-content-center">
         <small>© 2020 All rights reserved</small>
       </nav>
