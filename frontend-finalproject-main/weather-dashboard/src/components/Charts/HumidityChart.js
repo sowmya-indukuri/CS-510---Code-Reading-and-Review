@@ -3,8 +3,8 @@ import {Humidity} from 'react-environment-chart';
 import axios from "axios";
 import "./Humidity.css";
 
-//This component has code to fetch humidity data from 
-//api and render it to react environment chart called humidity.
+// This component fetches humidity data from 
+// api and render the chart called humidity.
 
 class HumidityChart extends Component
 {
@@ -26,11 +26,11 @@ class HumidityChart extends Component
       }
 
       componentDidMount = () => {
-        
+        // Fetching from API
         axios.get("https://api.openweathermap.org/data/2.5/onecall?lat="+this.props.lat+"&lon="+this.props.lon+"&appid=61d5f8577e9dc21f1a56b94167a17bf8&units=imperial")
           .then((response) => {
             const hum = response.data["current"].humidity;
-
+            // Setting up chart
             this.setState({
                 humidity: hum,
                 height: 130,

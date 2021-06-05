@@ -3,8 +3,8 @@ import axios from "axios";
 import ReactStoreIndicator from 'react-score-indicator';
 import "./UVChart.css";
 
-//This component has code to fetch UVindex data from 
-//api and render it to ReactStoreIndicator called react-score-indicator.
+// This component fetches UVindex data from api and renders
+// it in the form of ReactStoreIndicator called react-score-indicator.
 
 class UVChart extends React.Component {
     constructor(props) {
@@ -25,6 +25,7 @@ class UVChart extends React.Component {
           }
           componentDidMount = () =>
           {   
+          // API call to fetch data
           axios.get 
           ("https://api.openweathermap.org/data/2.5/onecall?lat="+this.props.lat+"&lon="+this.props.lon+"&exclude=minutely&appid=771164bf0a4b1c7e73d4a81d4f3b9485&units=imperial")
 

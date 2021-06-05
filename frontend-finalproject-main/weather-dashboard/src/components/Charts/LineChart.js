@@ -3,8 +3,8 @@ import { Line } from "react-chartjs-2";
 import axios from "axios";
 import moment from 'moment';
 
-//This component has code to fetch hourly details from 
-//api and render it to line graph.
+// This component fetches hourly temperature details of a 
+// location from the api and render it in the form of line graph.
 
 class LineChart extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class LineChart extends Component {
 
     componentDidMount = () => {
         
-        //console.log("Hourly");
+        // Fetching from API
         axios.get("https://api.openweathermap.org/data/2.5/onecall?lat="+this.props.lat+"&lon="+this.props.lon+"&exclude=minutely&appid=61d5f8577e9dc21f1a56b94167a17bf8&units=imperial"
             )
           .then((response) => {
@@ -40,7 +40,7 @@ class LineChart extends Component {
               temp_temperature.push(Number(hourly[i].temp.toFixed(0)));
               temp_hour.push(moment.unix(hourly[i].dt).format("hh:mm a"));
             }
-
+            // Setting up line chart data here
             this.setState({
               Data: {
                 labels: temp_hour,
