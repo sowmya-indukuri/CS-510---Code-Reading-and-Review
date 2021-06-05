@@ -1,5 +1,4 @@
 import React from "react";
-//import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Route } from "react-router-dom";
 import About from "./About";
 import Header from "./header";
@@ -19,7 +18,7 @@ function App() {
         <Route path="/" exact component={Homepage} />
         {/*About talks about the dashboard and the authors*/}
         <Route path="/About" component={About} />
-        {/* </Router> */}
+      
     </div>
   );
 }
