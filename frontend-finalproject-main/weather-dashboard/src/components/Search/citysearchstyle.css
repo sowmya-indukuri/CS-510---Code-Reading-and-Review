@@ -1,7 +1,14 @@
+/*CSS Style File for City Search */
+
+/*Form styling*/
 .inputSearch {
   border-style: solid 1px rgba(255, 255, 255, 0.589);
-  /* background-color: rgba(255, 255, 255, 0.322); */
   padding: 2px;
+}
+
+
+.inputfield {
+  padding: 10px;
 }
 
 .btnSearch {
@@ -17,7 +24,6 @@
 .cardline {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
-  /* width: 25em; */
   height: 20em;
   text-align: center;
   border-radius: 7px;
@@ -28,7 +34,6 @@
 .cardbar {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
-  /* width: 25em; */
   height: 20em;
   text-align: center;
   width: 32rem;
@@ -38,7 +43,6 @@
 .carduv {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
-  /* width: 15em; */
   height: 15em;
   text-align: center;
   border-radius: 7px;
@@ -47,7 +51,6 @@
 .cardwind {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
-  /* width: 15em; */
   height: 15em;
   text-align: center;
   border-radius: 7px;
@@ -57,7 +60,6 @@
 .cardhum {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
-  /* width: 19em; */
   height: 15em;
   text-align: center;
   border-radius: 7px;
@@ -74,9 +76,6 @@
   opacity: 0.9;
 }
 
-.inputfield {
-  padding: 10px;
-}
 .graphnames {
   font-weight: bold;
   font-size: small;
@@ -116,7 +115,6 @@
   .cardbar {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 25em; */
     height: 10em;
     text-align: center;
     width: 21em;
@@ -128,7 +126,6 @@
   .carduv {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 15em; */
     height: 15em;
     text-align: center;
     border-radius: 7px;
@@ -138,7 +135,6 @@
   .cardwind {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 15em; */
     height: 15em;
     text-align: center;
     border-radius: 7px;
@@ -149,7 +145,6 @@
   .cardhum {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 19em; */
     height: 15em;
     text-align: center;
     border-radius: 7px;
@@ -176,7 +171,6 @@
   .cardline {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 25em; */
     height: 20em;
     text-align: center;
     border-radius: 7px;
@@ -187,7 +181,6 @@
   .cardbar {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 25em; */
     height: 20em;
     text-align: center;
     width: 29rem;
@@ -200,7 +193,6 @@
   .cardline {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 25em; */
     height: 20em;
     text-align: center;
     border-radius: 7px;
@@ -213,7 +205,6 @@
   .cardbar {
     box-shadow: 0 0 20px #ccc;
     background-color: #fafafa;
-    /* width: 25em; */
     height: 20em;
     text-align: center;
     width: 29rem;
