@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url("backgroundimage.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-family: Helvetica;
+  height: 100%;
+  margin: 0;
+}
