@@ -3,7 +3,7 @@ import SearchCity from '../components/Search/citysearch'
 import Footer from '../components/Footer/footer'
 
 //This function is called by the route in mainpage which indeed contains components like searchcity and footer
-function Homepage() {
+function HomePage() {
   return (
     <div className="home">
       {/*This component functionality includes city search and reporting current
@@ -14,4 +14,4 @@ function Homepage() {
     </div>
   )
 }
-export default Homepage
+export default HomePage

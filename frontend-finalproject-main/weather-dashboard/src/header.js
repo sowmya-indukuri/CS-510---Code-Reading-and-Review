@@ -19,15 +19,15 @@ import './App.css'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handletoggle = () => {
+  const HandleToggle = () => {
     setIsOpen(!isOpen)
   }
   // Setting the font color for header
-  const headStyle = {
+  const FontColorOnHead = {
     color: 'white',
   }
 
-  const headerstyle = {
+  const FontColorOnHeader = {
     color: 'white',
   }
 
@@ -35,13 +35,13 @@ const Header = () => {
     //Main div for navbar inside header
     <div className="container-fluid pad">
       <Navbar bg="light" variant="light" expand="sm">
-        <NavbarBrand style={headStyle} href="/frontend-finalproject/">
+        <NavbarBrand style={FontColorOnHead} href="/frontend-finalproject/">
           <img src={logo} width="40" height="35" alt="weather icon" />
           <span className="wtitle">&nbsp;Weather Dashboard</span>
         </NavbarBrand>
         <NavbarToggler
           className="toggle"
-          onClick={handletoggle}
+          onClick={HandleToggle}
           aria-controls="basic-navbar-nav"
           aria-label="Toggle navigation"
         >
@@ -58,7 +58,7 @@ const Header = () => {
               <NavLink
                 className="font-weight-normal"
                 href="/frontend-finalproject/#/About"
-                style={headerstyle}
+                style={FontColorOnHeader}
               >
                 About
               </NavLink>

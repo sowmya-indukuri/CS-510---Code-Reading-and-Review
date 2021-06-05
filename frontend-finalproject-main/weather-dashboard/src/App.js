@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import About from './About'
 import Header from './header'
-import Homepage from './view/home'
+import HomePage from './view/home'
 import './App.css'
 
 //Main application flow starts here
@@ -14,7 +14,7 @@ function App() {
       {/*Header is built inside this component*/}
       <Header />
       {/*Homepage contains search city and footer components*/}
-      <Route path="/" exact component={Homepage} />
+      <Route path="/" exact component={HomePage} />
       {/*About talks about the dashboard and the authors*/}
       <Route path="/About" component={About} />
     </div>

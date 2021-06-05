@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
-import jprofile from './profile.jpg'
-import spicture from './Picture.jpeg'
+import Author1Picture from './profile.jpg'
+import Author2Picture from './Picture.jpeg'
 
 //This component has details about the application  and
 //the authors of this application.
@@ -42,7 +42,7 @@ class About extends React.Component {
               <div className="mx-auto card">
                 <div className="card-img">
                   <img
-                    src={jprofile}
+                    src={Author1Picture}
                     id="image1"
                     className="img-fluid"
                     alt="j profilepicture"
@@ -70,7 +70,7 @@ class About extends React.Component {
               <div className="mx-auto card">
                 <div className="card-img">
                   <img
-                    src={spicture}
+                    src={Author2Picture}
                     id="image1"
                     className="img-fluid"
                     alt="S profilepicture"
