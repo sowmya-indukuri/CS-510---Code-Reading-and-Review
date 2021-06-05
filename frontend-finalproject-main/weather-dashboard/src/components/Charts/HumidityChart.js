@@ -32,10 +32,10 @@ class HumidityChart extends Component {
           "&appid=61d5f8577e9dc21f1a56b94167a17bf8&units=imperial"
       )
       .then((response) => {
-        const hum = response.data["current"].humidity;
+        const get_humidity = response.data["current"].humidity;
         // Setting up chart
         this.setState({
-          humidity: hum,
+          humidity: get_humidity,
           height: 130,
         });
       });

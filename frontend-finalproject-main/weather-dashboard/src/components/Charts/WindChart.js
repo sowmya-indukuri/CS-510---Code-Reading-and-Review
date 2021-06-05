@@ -6,7 +6,7 @@ import "./WindChart.css";
 // This component fetches windspeed data from
 // api and renders in the form of a chart called electricity.
 
-class Windchart extends React.Component {
+class WindChart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,10 +30,10 @@ class Windchart extends React.Component {
           "&exclude=minutely&appid=771164bf0a4b1c7e73d4a81d4f3b9485&units=imperial"
       )
       .then((response) => {
-        const win = response.data.current.wind_speed;
+        const get_wind_data = response.data.current.wind_speed;
         // Set up data for a graph
         this.setState({
-          wind: win,
+          wind: get_wind_data,
           height: 180,
         });
       });
@@ -49,4 +49,4 @@ class Windchart extends React.Component {
     );
   }
 }
-export default Windchart;
+export default WindChart;

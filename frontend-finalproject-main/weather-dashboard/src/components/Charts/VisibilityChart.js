@@ -28,9 +28,9 @@ class VisibilityChart extends React.Component {
           "&exclude=minutely&appid=771164bf0a4b1c7e73d4a81d4f3b9485&units=imperial"
       )
       .then((response) => {
-        const vis = [];
-        var temp = response.data.current.visibility * 0.000621371;
-        vis.push(temp);
+        const visuals = [];
+        var temperature = response.data.current.visibility * 0.000621371;
+        visuals.push(temperature);
         // Setting up the state for the graph
         this.setState({
           Data: {
@@ -43,7 +43,7 @@ class VisibilityChart extends React.Component {
                 borderWidth: 0,
                 hoverBackgroundColor: "#fac146",
                 hoverBorderColor: "#fac146",
-                data: vis,
+                data: visuals,
               },
             ],
           },

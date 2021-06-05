@@ -31,13 +31,13 @@ class BarChart extends React.Component {
       )
       .then((response) => {
         var days = [];
-        const mintemp = [];
-        const maxtemp = [];
+        const min_temperature = [];
+        const max_temperature = [];
         const daily = response.data["daily"];
         for (var i = 1; i < daily.length; i++) {
           days.push(moment.unix(daily[i].dt).format("MMM Do YY"));
-          mintemp.push(Number(daily[i].temp.min.toFixed(0)));
-          maxtemp.push(Number(daily[i].temp.max.toFixed(0)));
+          min_temperature.push(Number(daily[i].temp.min.toFixed(0)));
+          max_temperature.push(Number(daily[i].temp.max.toFixed(0)));
         }
         // Setting up bar chart data here
         this.setState({
@@ -48,13 +48,13 @@ class BarChart extends React.Component {
             datasets: [
               {
                 label: "Minimum Temperature",
-                data: mintemp,
+                data: min_temperature,
                 backgroundColor: "#0090ff",
                 borderWidth: 2,
               },
               {
                 label: "Maximum Temperature",
-                data: maxtemp,
+                data: max_temperature,
                 backgroundColor: "#ff2600",
                 borderWidth: 2,
               },

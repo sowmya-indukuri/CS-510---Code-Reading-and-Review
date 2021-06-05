@@ -34,9 +34,9 @@ class UVChart extends React.Component {
       )
 
       .then((response) => {
-        const uv = response.data.current.uvi;
+        const get_uv_index_data = response.data.current.uvi;
         this.setState({
-          uvindex: uv,
+          uvindex: get_uv_index_data,
         });
       });
   };

@@ -33,20 +33,20 @@ class LineChart extends Component {
       .then((response) => {
         var hourly = response.data["hourly"];
 
-        const temp_hour = [];
-        const temp_temperature = [];
+        const temperature_hour = [];
+        const temperature = [];
         for (var i = 0; i <= 24; i++) {
-          temp_temperature.push(Number(hourly[i].temp.toFixed(0)));
-          temp_hour.push(moment.unix(hourly[i].dt).format("hh:mm a"));
+          temperature.push(Number(hourly[i].temp.toFixed(0)));
+          temperature_hour.push(moment.unix(hourly[i].dt).format("hh:mm a"));
         }
         // Setting up line chart data here
         this.setState({
           Data: {
-            labels: temp_hour,
+            labels: temperature_hour,
             datasets: [
               {
                 label: "Hourly",
-                data: temp_temperature,
+                data: temperature,
                 fill: true,
                 lineTension: 0.2,
                 backgroundColor: "#41d33b",
