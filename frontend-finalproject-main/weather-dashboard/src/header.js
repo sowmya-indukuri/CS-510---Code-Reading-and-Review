@@ -23,10 +23,6 @@ const Header = () => {
     setIsOpen(!isOpen)
   }
   // Setting the font color for header
-  const FontColorOnHead = {
-    color: 'white',
-  }
-
   const FontColorOnHeader = {
     color: 'white',
   }
@@ -35,7 +31,7 @@ const Header = () => {
     //Main div for navbar inside header
     <div className="container-fluid pad">
       <Navbar bg="light" variant="light" expand="sm">
-        <NavbarBrand style={FontColorOnHead} href="/frontend-finalproject/">
+        <NavbarBrand style={FontColorOnHeader} href="/frontend-finalproject/">
           <img src={logo} width="40" height="35" alt="weather icon" />
           <span className="wtitle">&nbsp;Weather Dashboard</span>
         </NavbarBrand>

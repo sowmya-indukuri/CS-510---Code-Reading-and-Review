@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import Footer from './components/Footer/footer'
 import Author1Picture from './profile.jpg'
 import Author2Picture from './Picture.jpeg'
 
@@ -96,9 +97,7 @@ class About extends React.Component {
           </div>
         </div>
         {/*Footer for About page*/}
-        <nav className="footer navbar justify-content-center">
-          <small>© 2020 All rights reserved</small>
-        </nav>
+        <Footer/>
       </div>
     )
   }
