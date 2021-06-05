@@ -15,13 +15,14 @@ import './App.css'
 //This function is called from homepage where it contains
 //the major route logic and navbar code.
 
+//This handles toggling events between about page and dashboard page
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const handletoggle = () => {
     setIsOpen(!isOpen)
   }
-
+  // Setting the font color for header
   const headStyle = {
     color: 'white',
   }
@@ -31,6 +32,7 @@ const Header = () => {
   }
 
   return (
+    //Main div for navbar inside header
     <div className="container-fluid pad">
       <Navbar bg="light" variant="light" expand="sm">
         <NavbarBrand style={headStyle} href="/frontend-finalproject/">
