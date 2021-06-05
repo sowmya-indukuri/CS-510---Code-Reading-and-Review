@@ -27,7 +27,6 @@ class VisibilityChart extends React.Component {
         const vis=[];
              var temp = (response.data.current.visibility) * 0.000621371;
              vis.push(temp);
-            //console.log(vis)
         // Setting up the state for the graph
         this.setState({
           Data:{
@@ -43,12 +42,10 @@ class VisibilityChart extends React.Component {
                 data: vis
 
               }
-            ]
-            
-        },
+            ]    
+          },
         })
       })
-  
     }
     render() {
       return(
@@ -59,8 +56,6 @@ class VisibilityChart extends React.Component {
             />
         </div>
       );
-  
-  
     }
   }
   export default VisibilityChart;

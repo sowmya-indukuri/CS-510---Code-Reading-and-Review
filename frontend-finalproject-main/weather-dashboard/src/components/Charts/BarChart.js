@@ -6,6 +6,7 @@ import { Bar } from "react-chartjs-2";
 // This component fetches daily forecast details from the
 // api and render it in a form of bar graph for minimum and maximum temperature.
 
+
 class BarChart extends React.Component {
     constructor(props) {
       super(props);
@@ -27,15 +28,12 @@ class BarChart extends React.Component {
         var days=[];
         const mintemp=[];
         const maxtemp= [];
-       // console.log("response",response);
         const daily= response.data["daily"];
-        // console.log("barchart",daily);
         for(var i=1;i<daily.length;i++){
             days.push(moment.unix(daily[i].dt).format('MMM Do YY'));
             mintemp.push(Number(daily[i].temp.min.toFixed(0)));
             maxtemp.push(Number(daily[i].temp.max.toFixed(0)));
           }
-          // console.log(mintemp)
         // Setting up bar chart data here
         this.setState({
           Data:{
@@ -47,7 +45,6 @@ class BarChart extends React.Component {
                 label:"Minimum Temperature",
                 data:mintemp,
                 backgroundColor: "#0090ff",
-                //borderColor: "rgba(255,99,132,1)",
                 borderWidth: 2,
   
             },
@@ -55,14 +52,12 @@ class BarChart extends React.Component {
               label:"Maximum Temperature",
               data:maxtemp,
               backgroundColor: "#ff2600",
-              //borderColor: "rgba(255,99,132,1)",
               borderWidth: 2,
-  
-          }
-        ] 
-        },
+            }
+            ] 
+          },
         })
-        })
+      })
   
     }
     render() {
@@ -70,11 +65,8 @@ class BarChart extends React.Component {
         <div>
              <Bar
               data={this.state.Data}
-              // width={25}
-              // height={15}
               options={{
                 responsive: true,
-  
                 scales: {
                   xAxes: [
                     {

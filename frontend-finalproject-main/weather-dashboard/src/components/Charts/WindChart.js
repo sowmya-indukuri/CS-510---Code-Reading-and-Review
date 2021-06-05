@@ -12,7 +12,6 @@ class Windchart extends React.Component {
         this.state = {
          wind:undefined,
         height:undefined,
-        //  option:undefined
         }
         };
         componentDidUpdate(prevProps) {
@@ -28,7 +27,6 @@ class Windchart extends React.Component {
             axios.get("https://api.openweathermap.org/data/2.5/onecall?lat="+this.props.lat+"&lon="+this.props.lon+"&exclude=minutely&appid=771164bf0a4b1c7e73d4a81d4f3b9485&units=imperial")
             .then((response) => {
                 const win = response.data.current.wind_speed;
-                //console.log(win);
                 // Set up data for a graph
                 this.setState({
                     wind:win,  
