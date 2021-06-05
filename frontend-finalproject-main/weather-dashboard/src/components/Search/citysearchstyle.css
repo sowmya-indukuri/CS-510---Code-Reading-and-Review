@@ -1,16 +1,17 @@
 /*CSS Style File for City Search */
 
-/*Form styling*/
+/*Form styling begins*/
 .inputSearch {
   border-style: solid 1px rgba(255, 255, 255, 0.589);
   padding: 2px;
 }
 
-
 .inputfield {
   padding: 10px;
 }
+/*Form Styling ends*/
 
+/*Button Styling begins*/
 .btnSearch {
   background-color: rgb(29, 144, 245);
   color: white;
@@ -20,7 +21,9 @@
   font-weight: lighter;
   color: rgb(41, 50, 53);
 }
+/*Button Styling ends*/
 
+/*Card Styling begins*/
 .cardline {
   box-shadow: 0 0 10px #ccc;
   background-color: #fafafa;
@@ -75,7 +78,9 @@
   border-radius: 7px;
   opacity: 0.9;
 }
+/*Card Styling ends*/
 
+/*Graph Styling begins*/
 .graphnames {
   font-weight: bold;
   font-size: small;
@@ -90,7 +95,9 @@
 .humdiv {
   padding-top: 0px;
 }
+/*Graph Styling ends*/
 
+/*Phone View Styling*/
 @media screen and (max-width: 500px) {
   .lw {
     display: flex;
@@ -167,6 +174,7 @@
   }
 }
 
+/* Tablet view styling*/
 @media screen and (max-width: 1200px) {
   .cardline {
     box-shadow: 0 0 20px #ccc;
@@ -189,6 +197,7 @@
   }
 }
 
+/* Laptop/System view styling */
 @media screen and (max-width: 992px) and (min-width: 750px) {
   .cardline {
     box-shadow: 0 0 20px #ccc;
