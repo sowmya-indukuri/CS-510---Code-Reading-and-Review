@@ -54,13 +54,13 @@ class SearchCity extends Component {
           ) {
             console.log("please enter valid city");
           }
-          const name = response.data.name;
-          const lon = response.data.coord.lon;
-          const lat = response.data.coord.lat;
+          const cityName = response.data.name;
+          const longitude = response.data.coord.lon;
+          const latitude = response.data.coord.lat;
           this.setState({
-            name: name,
-            latitude: lat,
-            longitude: lon,
+            name: cityName,
+            latitude: latitude,
+            longitude: longitude,
           });
         })
         .catch((err) => {
@@ -90,24 +90,24 @@ class SearchCity extends Component {
     let currentComponent = this;
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
+        var latitute_value = position.coords.latitude;
+        var longitude_value = position.coords.longitude;
         axios
           .get(
             "https://api.openweathermap.org/data/2.5/weather?lat=" +
-              lat +
+            latitute_value +
               "&lon=" +
-              lon +
+              longitude_value +
               "&units=imperial&appid=61d5f8577e9dc21f1a56b94167a17bf8"
           )
           .then((response) => {
-            const name = response.data.name;
-            const lon = response.data.coord.lon;
-            const lat = response.data.coord.lat;
+            const cityName = response.data.name;
+            const longitude_value = response.data.coord.lon;
+            const latitute_value = response.data.coord.lat;
             currentComponent.setState({
-              latitude: lat,
-              longitude: lon,
-              name: name,
+              latitude: latitute_value,
+              longitude: longitude_value,
+              name: cityName,
             });
           });
       });
